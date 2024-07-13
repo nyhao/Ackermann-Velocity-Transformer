@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>velocity_transformer</name>
+  <version>0.1.0</version>
+  <description>A package to convert ROS Twist message to velocity command in Ackermann convention</description>
+  <maintainer email="nyhao.ng@gmail.com">q</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>rcl_interfaces</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

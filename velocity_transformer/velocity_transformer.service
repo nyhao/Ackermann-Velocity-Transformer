@@ -1,0 +1,15 @@
+[Unit]
+Description=A service which runs the velocity transformer node to convert Twist messages to velocity command in Ackermann convention.
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/hunter_ws/src/velocity_transformer
+ExecStart=/usr/bin/python3 /hunter_ws/src/velocity_transformer/velocity_transformer.py
+Restart=on-failure
+Environment=ROS_MASTER_URI=http://localhost:11311
+Environment=ROS_PACKAGE_PATH=/opt/ros/humble/share:/hunter_ws/src
+
+[Install]
+WantedBy=multi-user.target
